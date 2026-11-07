@@ -10,16 +10,31 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(value = AbstractGunItem.class,remap = false)
 public class MixinAbstractGunItem {
 
-    @ModifyVariable(method = "lambda$canReload$1", at = @At("HEAD"), argsOnly = true, name = "arg1")
+    @ModifyVariable(
+            method = "lambda$canReload$2",
+            at = @At("HEAD"),
+            argsOnly = true,
+            name = "arg1"
+    )
     private static IItemHandler mixinAbstractGunItem$lambda$canReload$1(IItemHandler itemHandler) {
         return ItemHandlerWithCurios.create(itemHandler);
     }
-    @ModifyVariable(method = "findAndExtractInventoryAmmo", at = @At("HEAD"), argsOnly = true, name = "arg1")
+    @ModifyVariable(
+            method = "findAndExtractInventoryAmmo",
+            at = @At("HEAD"),
+            argsOnly = true,
+            name = "arg1"
+    )
     private IItemHandler MixinAbstractGunItem$findAndExtractInventoryAmmo(IItemHandler itemHandler) {
         return ItemHandlerWithCurios.create(itemHandler);
     }
 
-    @ModifyVariable(method = "lambda$hasInventoryAmmo$6", at = @At("HEAD"), argsOnly = true, name = "arg1")
+    @ModifyVariable(
+            method = "lambda$hasInventoryAmmo$7",
+            at = @At("HEAD"),
+            argsOnly = true,
+            name = "arg1"
+    )
     private static IItemHandler MixinAbstractGunItem$lambda$hasInventoryAmmo$6(IItemHandler itemHandler) {
         return ItemHandlerWithCurios.create(itemHandler);
     }
