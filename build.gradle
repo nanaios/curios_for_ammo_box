@@ -164,12 +164,22 @@ repositories {
         name = "Illusive Soulworks maven"
         url = "https://maven.theillusivec4.top/"
     }
+
+    maven {
+        // fg.deobf で変換した jar は ForgeGradle のリポジトリから来るので、exclusiveContent にはしない
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation fg.deobf("curse.maven:timeless-and-classics-zero-1028108:8141310")
+    // tacz 1.2.0 https://modrinth.com/mod/timeless-and-classics-zero/version/QGCbNkTy
+    implementation fg.deobf("maven.modrinth:SzzJttH8:QGCbNkTy")
 
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
