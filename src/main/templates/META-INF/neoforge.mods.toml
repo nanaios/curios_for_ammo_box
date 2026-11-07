@@ -71,6 +71,14 @@ type = "required"
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
+# The mixin targets changed in tacz 1.2.0, so older tacz versions (including the unofficial 1.21.1 port) are not supported
+[[dependencies."${mod_id}"]]
+modId = "tacz"
+type = "required"
+reason = "This version needs TaCZ 1.2.0 or later. Use version 1.2.0 of this mod with older TaCZ versions or the unofficial port."
+versionRange = "[1.2.0,)"
+ordering = "NONE"
+side = "BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't

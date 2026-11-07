@@ -6,3 +6,9 @@
 してください。リリースするときは「## Unreleased」をそのバージョンに書き換えます。
 1.2.0 までの履歴は Modrinth・CurseForge の各バージョンのページにあります。
 -->
+
+## Unreleased
+
+- Now supports the official TaCZ release for NeoForge 1.21.1 (TaCZ 1.2.0). Thanks to mas6y6 ([#7](https://github.com/nanaios/curios_for_ammo_box/pull/7))!
+- Fixed a crash on startup with TaCZ 1.2.0.
+- TaCZ 1.2.0 or later is now required, so the unofficial TaCZ 1.21.1 NeoForge port is no longer supported. If you stay on the unofficial port, keep using version 1.2.0 of this mod.
