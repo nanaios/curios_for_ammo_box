@@ -61,3 +61,10 @@ mandatory = true
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
+# The mixin targets changed in tacz 1.2.0, so older tacz versions are not supported
+[[dependencies."${mod_id}"]]
+modId = "tacz"
+mandatory = true
+versionRange = "[1.2.0,)"
+ordering = "NONE"
+side = "BOTH"
