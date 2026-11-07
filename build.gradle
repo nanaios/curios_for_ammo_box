@@ -21,11 +21,15 @@ repositories {
         url = uri("https://maven.theillusivec4.top/")
     }
 
-    maven {
-        name = "Curse Maven"
-        url = "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
         }
     }
 }
@@ -123,7 +127,7 @@ dependencies {
     runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
 
-    implementation "curse.maven:tacz-1-21-1-1353462:8167430"
+    implementation "maven.modrinth:SzzJttH8:O2Pfsh6w" // tacz 1.2.0 https://modrinth.com/mod/timeless-and-classics-zero/version/O2Pfsh6w
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

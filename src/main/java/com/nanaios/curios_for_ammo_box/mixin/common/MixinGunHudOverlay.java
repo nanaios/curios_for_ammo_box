@@ -1,15 +1,20 @@
 package com.nanaios.curios_for_ammo_box.mixin.common;
 
 import com.nanaios.curios_for_ammo_box.util.InventoryWithCurios;
-import com.tacz.guns.client.gui.overlay.GunHudOverlay;
+import com.tacz.guns.client.gameplay.ClientAmmoCount;
 import net.minecraft.world.entity.player.Inventory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
-@Mixin(value = GunHudOverlay.class,remap = false)
+@Mixin(value = ClientAmmoCount.class,remap = false)
 public class MixinGunHudOverlay {
-    @ModifyVariable(method = "handleInventoryAmmo", at = @At("HEAD"), argsOnly = true, name = "arg1")
+
+    @ModifyVariable(
+            method = "get",
+            at = @At("STORE"),
+            name = "inventory"
+    )
     private static Inventory mixinHandleInventoryAmmo(Inventory inventory) {
         return new InventoryWithCurios(inventory);
     }
