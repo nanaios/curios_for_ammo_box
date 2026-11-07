@@ -7,7 +7,7 @@
 1.2.0 までの履歴は Modrinth・CurseForge の各バージョンのページにあります。
 -->
 
-## Unreleased
+## 1.2.1
 
 - Fixed a crash on startup with TaCZ 1.2.0.
 - TaCZ 1.2.0 or later is now required. If you stay on an older TaCZ, keep using version 1.2.0 of this mod.
