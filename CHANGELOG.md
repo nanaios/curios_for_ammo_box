@@ -7,7 +7,7 @@
 1.2.0 までの履歴は Modrinth・CurseForge の各バージョンのページにあります。
 -->
 
-## Unreleased
+## 1.2.1
 
 - Now supports the official TaCZ release for NeoForge 1.21.1 (TaCZ 1.2.0). Thanks to mas6y6 ([#7](https://github.com/nanaios/curios_for_ammo_box/pull/7))!
 - Fixed a crash on startup with TaCZ 1.2.0.
