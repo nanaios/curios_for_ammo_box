@@ -10,6 +10,7 @@
 ## Unreleased
 
 - Fixed a crash with TACZ-addon 1.2.0 (`ClassMetadataNotFoundException: com.mafuyu404.taczaddon.init.VirtualInventory$ItemHandler`).
+- Fixed ammo in curio slots being counted twice in the HUD ammo count when TACZ-addon 1.2.0 is installed.
 
 ## 1.2.1
 
