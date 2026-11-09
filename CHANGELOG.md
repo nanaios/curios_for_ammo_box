@@ -7,6 +7,10 @@
 1.2.0 までの履歴は Modrinth・CurseForge の各バージョンのページにあります。
 -->
 
+## Unreleased
+
+- Fixed a crash with TACZ-addon 1.2.0 (`ClassMetadataNotFoundException: com.mafuyu404.taczaddon.init.VirtualInventory$ItemHandler`).
+
 ## 1.2.1
 
 - Fixed a crash on startup with TaCZ 1.2.0.
