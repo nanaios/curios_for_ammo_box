@@ -1,6 +1,7 @@
 package com.nanaios.curios_for_ammo_box.mixin.common;
 
 import com.nanaios.curios_for_ammo_box.util.InventoryWithCurios;
+import com.nanaios.curios_for_ammo_box.util.TaczAddonCompat;
 import com.tacz.guns.client.gameplay.ClientAmmoCount;
 import net.minecraft.world.entity.player.Inventory;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,6 +13,10 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class MixinGunHudOverlay {
     @ModifyVariable(method = "get", at = @At("STORE"), name = "inventory")
     private static Inventory wrapInventoryForAmmoHandling(Inventory inventory) {
+        // taczaddon が差し替えた VirtualInventory には Curios スロットの中身がもう入っているので、包むと二重に数えてしまう
+        if (TaczAddonCompat.isVirtualInventory(inventory)) {
+            return inventory;
+        }
         return new InventoryWithCurios(inventory);
     }
 }
