@@ -7,6 +7,12 @@
 1.2.0 までの履歴は Modrinth・CurseForge の各バージョンのページにあります。
 -->
 
+## Unreleased
+
+- Ammo unloaded from a gun (TACZ 1.2.0+) is now also returned to ammo boxes in curio slots.
+- Confirmed compatibility with TACZ 1.2.0-hotfix (development environment now builds against it).
+
+
 ## 1.2.2
 
 - Fixed a crash with TACZ-addon 1.2.0 (`ClassMetadataNotFoundException: com.mafuyu404.taczaddon.init.VirtualInventory$ItemHandler`).
